@@ -1,4 +1,4 @@
-# ORSK Kind Registry
+# ORS Kind Registry (ORSK)
 
 This document defines the content kinds supported by the ORS protocol.
 
