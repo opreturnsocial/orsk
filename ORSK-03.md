@@ -25,7 +25,7 @@ because the parent is unknown or not yet seen (e.g. out-of-order scanning).
 
 ## Content
 
-Content starts at offset 133. Content size is limited by miner policy, not protocol (same as ORSK-01).
+Content starts at offset 133.
 
 ## Validation
 

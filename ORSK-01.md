@@ -4,8 +4,4 @@
 
 Plain text post. The bytes from offset 101 to end are the raw UTF-8 content.
 
-## Size
-
-Content size is limited by miner policy, not protocol. Modern miners accept 10,000+ bytes.
-
 See [examples/ORSK-01.md](examples/ORSK-01.md) for encoding examples.

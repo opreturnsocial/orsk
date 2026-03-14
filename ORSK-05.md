@@ -21,7 +21,7 @@ Parsers SHOULD verify the referenced post exists. Parsers MUST NOT reject a quot
 
 ## Content
 
-Content starts at offset 133. Content size is limited by miner policy, not protocol (same as ORSK-01).
+Content starts at offset 133.
 
 ## Validation
 
