@@ -4,12 +4,12 @@
 
 Updates a single profile field for the author's pubkey. "Latest published wins" per pubkey+propertyKind.
 
-## Kind-Specific Layout (offset 101+)
+## Kind-Specific Layout
 
-| Offset | Size | Description |
-|--------|------|-------------|
-| 101 | 1 | propertyKind byte |
-| 102-end | variable | Raw value bytes |
+| Kind-data offset | Size | Description |
+|------------------|------|-------------|
+| 0 | 1 | propertyKind byte |
+| 1-end | variable | Raw value bytes |
 
 ## Property Kind Values
 
@@ -32,4 +32,4 @@ The `bot` field is normalised by parsers: `0x01` → `"true"`, `0x00` → `"fals
 
 ## Validation
 
-Invalid if payload is shorter than 102 bytes (missing propertyKind byte).
+Invalid if kind data is shorter than 1 byte (missing propertyKind byte).

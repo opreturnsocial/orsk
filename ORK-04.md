@@ -6,11 +6,11 @@ A pure repost of an existing ORS post. Contains only a reference to the original
 
 ## Format
 
-| Field             | Offset | Size     | Description                                           |
-| ----------------- | ------ | -------- | ----------------------------------------------------- |
-| `referenced_txid` | 101    | 32 bytes | txid of the post being reposted (internal byte order) |
+| Field             | Kind-data offset | Size     | Description                                           |
+| ----------------- | ---------------- | -------- | ----------------------------------------------------- |
+| `referenced_txid` | 0                | 32 bytes | txid of the post being reposted (internal byte order) |
 
-**Exact payload length:** 133 bytes.
+**Kind data length:** exactly 32 bytes.
 
 ## Referenced Post
 
@@ -22,8 +22,8 @@ Parsers SHOULD verify the referenced post exists. Parsers MUST NOT reject a repo
 
 In addition to the base ORS-01 requirements:
 
-1. Payload MUST be exactly 133 bytes (no content field)
-2. `referenced_txid` at offsets 101-132 MUST be 32 bytes
+1. Kind data MUST be exactly 32 bytes (no content field)
+2. `referenced_txid` at kind-data bytes 0-31 MUST be 32 bytes
 3. `referenced_txid` SHOULD reference a known ORS post
 
 See [examples/ORK-04.md](examples/ORK-04.md) for encoding examples.

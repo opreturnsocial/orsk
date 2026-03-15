@@ -7,12 +7,12 @@ to the parent post's Bitcoin txid.
 
 ## Format
 
-| Field         | Offset | Size     | Description                                             |
-| ------------- | ------ | -------- | ------------------------------------------------------- |
-| `parent_txid` | 101    | 32 bytes | txid of the post being replied to (internal byte order) |
-| `content`     | 133    | variable | UTF-8 reply text                                        |
+| Field         | Kind-data offset | Size     | Description                                             |
+| ------------- | ---------------- | -------- | ------------------------------------------------------- |
+| `parent_txid` | 0                | 32 bytes | txid of the post being replied to (internal byte order) |
+| `content`     | 32               | variable | UTF-8 reply text                                        |
 
-**Minimum payload length:** 134 bytes.
+**Minimum kind data length:** 33 bytes.
 
 ## Parent Reference
 
@@ -25,14 +25,14 @@ because the parent is unknown or not yet seen (e.g. out-of-order scanning).
 
 ## Content
 
-Content starts at offset 133.
+Content starts at kind-data offset 32.
 
 ## Validation
 
 In addition to the base ORS-01 requirements:
 
-1. Payload MUST be at least 134 bytes
-2. `parent_txid` at offsets 101-132 MUST be 32 bytes
+1. Kind data MUST be at least 33 bytes
+2. `parent_txid` at kind-data bytes 0-31 MUST be 32 bytes
 3. Content MUST be at least 1 byte
 4. `parent_txid` SHOULD reference a known ORS post
 

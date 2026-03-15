@@ -2,16 +2,16 @@
 
 **Kind Value:** `0x05` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
-A repost of an existing ORS post with added commentary. Extends ORK-04 with a UTF-8 content field beginning at offset 133.
+A repost of an existing ORS post with added commentary. Extends ORK-04 with a UTF-8 content field beginning at kind-data offset 32.
 
 ## Format
 
-| Field             | Offset | Size     | Description                                               |
-| ----------------- | ------ | -------- | --------------------------------------------------------- |
-| `referenced_txid` | 101    | 32 bytes | txid of the post being quoted (internal byte order)       |
-| `content`         | 133    | variable | UTF-8 quote commentary                                    |
+| Field             | Kind-data offset | Size     | Description                                               |
+| ----------------- | ---------------- | -------- | --------------------------------------------------------- |
+| `referenced_txid` | 0                | 32 bytes | txid of the post being quoted (internal byte order)       |
+| `content`         | 32               | variable | UTF-8 quote commentary                                    |
 
-**Minimum payload length:** 134 bytes.
+**Minimum kind data length:** 33 bytes.
 
 ## Referenced Post
 
@@ -21,14 +21,14 @@ Parsers SHOULD verify the referenced post exists. Parsers MUST NOT reject a quot
 
 ## Content
 
-Content starts at offset 133.
+Content starts at kind-data offset 32.
 
 ## Validation
 
 In addition to the base ORS-01 requirements:
 
-1. Payload MUST be at least 134 bytes
-2. `referenced_txid` at offsets 101-132 MUST be 32 bytes
+1. Kind data MUST be at least 33 bytes
+2. `referenced_txid` at kind-data bytes 0-31 MUST be 32 bytes
 3. Content MUST be at least 1 byte
 4. `referenced_txid` SHOULD reference a known ORS post
 

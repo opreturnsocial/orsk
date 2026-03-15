@@ -6,12 +6,12 @@ Declares a follow or unfollow of another pubkey. "Latest published wins" per (fo
 
 ## Format
 
-| Field           | Offset | Size     | Description                                      |
-| --------------- | ------ | -------- | ------------------------------------------------ |
-| `target_pubkey` | 101    | 32 bytes | x-only Schnorr pubkey of the account to follow   |
-| `action`        | 133    | 1 byte   | `0x01` = follow, `0x00` = unfollow               |
+| Field           | Kind-data offset | Size     | Description                                      |
+| --------------- | ---------------- | -------- | ------------------------------------------------ |
+| `target_pubkey` | 0                | 32 bytes | x-only Schnorr pubkey of the account to follow   |
+| `action`        | 32               | 1 byte   | `0x01` = follow, `0x00` = unfollow               |
 
-**Exact payload length:** 134 bytes.
+**Kind data length:** exactly 33 bytes.
 
 ## Semantics
 
@@ -23,9 +23,9 @@ A pubkey MUST NOT follow itself. Parsers SHOULD ignore self-follow payloads.
 
 In addition to the base ORS-01 requirements:
 
-1. Payload MUST be exactly 134 bytes
-2. `target_pubkey` at offsets 101-132 MUST be 32 bytes
-3. `action` at offset 133 MUST be `0x01` or `0x00`
+1. Kind data MUST be exactly 33 bytes
+2. `target_pubkey` at kind-data bytes 0-31 MUST be 32 bytes
+3. `action` at kind-data byte 32 MUST be `0x01` or `0x00`
 4. `target_pubkey` MUST NOT equal the author's `pubkey`
 
 See [examples/ORK-06.md](examples/ORK-06.md) for encoding examples.
