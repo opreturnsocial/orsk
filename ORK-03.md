@@ -1,4 +1,4 @@
-# ORSK-03: Text Reply
+# ORK-03: Text Reply
 
 **Kind Value:** `0x03` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
@@ -36,4 +36,4 @@ In addition to the base ORS-01 requirements:
 3. Content MUST be at least 1 byte
 4. `parent_txid` SHOULD reference a known ORS post
 
-See [examples/ORSK-03.md](examples/ORSK-03.md) for encoding examples.
+See [examples/ORK-03.md](examples/ORK-03.md) for encoding examples.

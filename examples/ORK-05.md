@@ -1,4 +1,4 @@
-# ORSK-05 Examples: Quote Repost
+# ORK-05 Examples: Quote Repost
 
 Kind value: `0x05`. Kind-specific data (offset 101+) is a 32-byte `referenced_txid` (internal byte order) followed by raw UTF-8 content.
 

@@ -1,4 +1,4 @@
-# ORSK-04 Examples: Repost
+# ORK-04 Examples: Repost
 
 Kind value: `0x04`. Kind-specific data (offset 101+) is a single 32-byte `referenced_txid` (internal byte order). No content field.
 

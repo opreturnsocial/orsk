@@ -1,4 +1,4 @@
-# ORSK-06: Follow
+# ORK-06: Follow
 
 **Kind Value:** `0x06` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
@@ -28,4 +28,4 @@ In addition to the base ORS-01 requirements:
 3. `action` at offset 133 MUST be `0x01` or `0x00`
 4. `target_pubkey` MUST NOT equal the author's `pubkey`
 
-See [examples/ORSK-06.md](examples/ORSK-06.md) for encoding examples.
+See [examples/ORK-06.md](examples/ORK-06.md) for encoding examples.

@@ -1,4 +1,4 @@
-# ORSK-02: Profile Update
+# ORK-02: Profile Update
 
 **Kind Value:** `0x02` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
@@ -22,7 +22,7 @@ Updates a single profile field for the author's pubkey. "Latest published wins" 
 | `0x04` | `bot` | 1 byte: `0x01`=true, `0x00`=false |
 | `0x05` | `website_url` | UTF-8 string (URL) |
 
-See [examples/ORSK-02.md](examples/ORSK-02.md) for encoding examples.
+See [examples/ORK-02.md](examples/ORK-02.md) for encoding examples.
 
 ## Semantics
 

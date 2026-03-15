@@ -1,8 +1,8 @@
-# ORSK-05: Quote Repost
+# ORK-05: Quote Repost
 
 **Kind Value:** `0x05` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
-A repost of an existing ORS post with added commentary. Extends ORSK-04 with a UTF-8 content field beginning at offset 133.
+A repost of an existing ORS post with added commentary. Extends ORK-04 with a UTF-8 content field beginning at offset 133.
 
 ## Format
 
@@ -32,4 +32,4 @@ In addition to the base ORS-01 requirements:
 3. Content MUST be at least 1 byte
 4. `referenced_txid` SHOULD reference a known ORS post
 
-See [examples/ORSK-05.md](examples/ORSK-05.md) for encoding examples.
+See [examples/ORK-05.md](examples/ORK-05.md) for encoding examples.

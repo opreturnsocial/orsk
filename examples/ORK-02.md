@@ -1,4 +1,4 @@
-# ORSK-02 Examples: Profile Update
+# ORK-02 Examples: Profile Update
 
 Kind value: `0x02`. Kind-specific data (offset 101+) is a 1-byte propertyKind followed by the raw value.
 

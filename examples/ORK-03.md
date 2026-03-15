@@ -1,4 +1,4 @@
-# ORSK-03 Examples: Text Reply
+# ORK-03 Examples: Text Reply
 
 Kind value: `0x03`. Kind-specific data (offset 101+) is a 32-byte `parent_txid` (internal byte order) followed by raw UTF-8 content.
 

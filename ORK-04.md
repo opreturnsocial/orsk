@@ -1,4 +1,4 @@
-# ORSK-04: Repost
+# ORK-04: Repost
 
 **Kind Value:** `0x04` | **Base Protocol:** [ORS-01](https://github.com/opreturnsocial/ors/blob/master/ORS-01.md)
 
@@ -26,4 +26,4 @@ In addition to the base ORS-01 requirements:
 2. `referenced_txid` at offsets 101-132 MUST be 32 bytes
 3. `referenced_txid` SHOULD reference a known ORS post
 
-See [examples/ORSK-04.md](examples/ORSK-04.md) for encoding examples.
+See [examples/ORK-04.md](examples/ORK-04.md) for encoding examples.

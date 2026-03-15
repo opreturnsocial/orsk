@@ -1,4 +1,4 @@
-# ORSK-06 Examples: Follow
+# ORK-06 Examples: Follow
 
 Kind value: `0x06`. Kind-specific data (offset 101+) is a 32-byte `target_pubkey` (x-only Schnorr) followed by 1-byte `action`.
 
